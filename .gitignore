@@ -1,0 +1,23 @@
+# Secrets: never commit
+.env
+*.env
+!.env.example
+
+# Database and backups (contain student data)
+*.db
+*.db-journal
+*.sqlite3
+backups/
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Editor and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log
