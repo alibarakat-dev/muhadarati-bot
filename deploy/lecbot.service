@@ -1,0 +1,19 @@
+[Unit]
+Description=Muhadarati Lectures Bot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=lecbot
+WorkingDirectory=/opt/lecbot
+ExecStart=/opt/lecbot/venv/bin/python /opt/lecbot/bot.py
+Restart=always
+RestartSec=5
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+ReadWritePaths=/opt/lecbot
+
+[Install]
+WantedBy=multi-user.target
